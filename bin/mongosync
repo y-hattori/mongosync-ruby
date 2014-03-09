@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'mongosync'
+
+if ARGV.size != 2
+  puts Mongosync::usage
+  exit
+end
+
+Mongosync::sync(ARGV[0], ARGV[1])
